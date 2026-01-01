@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Data Entry Masterclass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Synonym:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- WRAPPER (Archive Theme) --- */
+        .lynk-wrapper {
+            font-family: 'Space Grotesk', sans-serif; 
+            background-color: #E4E4E7; /* Abu-abu lebih gelap dikit biar pop up */
+            color: #18181B;
+            width: 100%;
+            position: relative;
+            overflow-x: hidden;
+            padding-bottom: 60px;
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal-node {
+            opacity: 0; transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal-node.active { opacity: 1; transform: translateY(0); }
+
+        /* --- COMPONENTS --- */
+        
+        .folder-container {
+            background: white;
+            border: 2px solid #18181B;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            position: relative;
+            box-shadow: 6px 6px 0px #18181B;
+            overflow: hidden;
+        }
+        
+        .folder-tab {
+            background: #18181B; color: white;
+            display: inline-block; padding: 6px 15px;
+            font-size: 10px; font-weight: bold; text-transform: uppercase;
+            border-radius: 0 0 8px 0; letter-spacing: 1px;
+        }
+
+        .hero-badge {
+            background: #FCD34D;
+            border: 2px solid #18181B;
+            padding: 8px 16px; font-weight: 700;
+            display: inline-block; transform: rotate(-2deg);
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            margin-bottom: 15px; font-size: 12px;
+        }
+
+        /* --- NEW: EVIDENCE PHOTO (GAMBAR PRODUK) --- */
+        .evidence-photo-wrapper {
+            position: relative;
+            width: 260px; margin: 20px auto 30px auto;
+            transform: rotate(2deg);
+        }
+        .evidence-photo {
+            width: 100%; height: auto;
+            border: 3px solid #18181B;
+            background: white; padding: 5px;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.15);
+        }
+        /* Efek Paper Clip CSS */
+        .paper-clip {
+            position: absolute; top: -15px; right: 20px;
+            width: 15px; height: 35px;
+            border: 3px solid #52525B; border-radius: 10px;
+            background: transparent; z-index: 10;
+        }
+        .paper-clip::after {
+            content: ""; position: absolute; top: 10px; left: -3px;
+            width: 22px; height: 12px; background: #E4E4E7; /* Warna bg biar klip terlihat "masuk" */
+        }
+
+        .skill-tag {
+            border: 1px solid #18181B; padding: 4px 10px;
+            font-size: 10px; font-weight: 600; border-radius: 50px;
+            background: white; white-space: nowrap;
+        }
+
+        .case-file {
+            background: #FAFAFA; border-bottom: 1px dashed #ccc;
+            padding: 15px; position: relative;
+        }
+        .case-file:last-child { border-bottom: none; }
+        
+        .file-icon {
+            font-size: 24px; position: absolute; right: 15px; top: 15px;
+            opacity: 0.2; transform: rotate(10deg);
+        }
+
+        .upsell-ticket {
+            background: #18181B; color: white;
+            padding: 20px; border-radius: 12px;
+            position: relative; overflow: hidden;
+            border: 1px dashed #52525B;
+        }
+        .upsell-ticket::before, .upsell-ticket::after {
+            content: ""; position: absolute; top: 50%; transform: translateY(-50%);
+            width: 16px; height: 16px; background: #E4E4E7; border-radius: 50%;
+        }
+        .upsell-ticket::before { left: -8px; }
+        .upsell-ticket::after { right: -8px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="lynk-wrapper">
+
+        <div class="w-full flex justify-center pt-8 pb-4 relative z-10 px-6 text-center">
+            <div class="reveal-node max-w-lg w-full">
+                
+                <div class="hero-badge">🚀 THE SECRET WEAPON</div>
+                
+                <h1 class="text-3xl font-extrabold leading-none mb-2 tracking-tight">
+                    Winning Portfolio <br> <span class="text-gray-500">Data Entry</span>
+                </h1>
+                
+                <p class="text-xs font-semibold text-gray-600 leading-relaxed max-w-xs mx-auto mb-2">
+                    Bikin klien merem melek langsung <i>Hire</i> kamu!
+                </p>
+
+                <div class="evidence-photo-wrapper">
+                    <div class="paper-clip"></div> <img src="https://cdn.lynkid.my.id/draft-products/01-01-2026/1767276447266_1082891.png" alt="Portfolio Cover" class="evidence-photo">
+                </div>
+
+                <div class="flex items-center gap-3 bg-white p-2 rounded-lg border border-gray-300 w-max mx-auto shadow-sm">
+                    <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs border border-gray-400">👩‍💻</div>
+                    <div class="text-left">
+                        <p class="text-[9px] font-bold text-gray-400 uppercase leading-none">Mentor</p>
+                        <p class="text-[11px] font-bold text-black leading-tight">Ajeng Wahys (6th Exp)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="w-full px-6 relative z-10">
+            <div class="reveal-node max-w-lg mx-auto">
+                
+                <div class="folder-container">
+                    <div class="folder-tab">FILE #01: SKILLSET</div>
+                    <div class="p-4">
+                        <p class="text-xs font-bold mb-3">Apa yang kita jual ke klien?</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag">⚡ Fast Typing</span>
+                            <span class="skill-tag">📊 Excel / GSheets</span>
+                            <span class="skill-tag">🔍 Data Research</span>
+                            <span class="skill-tag">🛒 Ecommerce Listing</span>
+                            <span class="skill-tag">✅ Data Validation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="folder-container">
+                    <div class="folder-tab bg-yellow-500 text-black">FILE #02: CASE STUDIES</div>
+                    <div class="p-0">
+                        
+                        <div class="case-file">
+                            <div class="file-icon">📑</div>
+                            <h4 class="text-sm font-bold uppercase mb-1">Project 1: Data Conversion</h4>
+                            <p class="text-[11px] text-gray-600 leading-relaxed">
+                                <strong>Misi:</strong> Ubah PDF berantakan (Supplier, Produk) jadi Excel rapi & siap pakai. <br>
+                                <strong>Tools:</strong> Rumus TRIM(), Data Validation.
+                            </p>
+                        </div>
+
+                        <div class="case-file">
+                            <div class="file-icon">🍽️</div>
+                            <h4 class="text-sm font-bold uppercase mb-1">Project 2: Resto Research</h4>
+                            <p class="text-[11px] text-gray-600 leading-relaxed">
+                                <strong>Misi:</strong> Cari data 100+ restoran (Menu, Harga, Lokasi) dari Maps/Yelp. <br>
+                                <strong>Output:</strong> Database Leads akurat.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="bg-gray-100 p-2 text-center border-t border-gray-200">
+                        <p class="text-[10px] font-bold text-gray-500">
+                            *Kita buat "Dummy Project" yang terlihat REAL!
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-6 pb-6 relative z-10">
+            <div class="reveal-node max-w-lg mx-auto">
+                
+                <div class="upsell-ticket text-center">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">
+                        ⚠️ SYSTEM MESSAGE
+                    </p>
+                    <p class="text-xs leading-relaxed mb-4">
+                        "Portofolio ini cuma 1 bagian dari strategi besar Remote Work. Mau tau cara dapetin kerjaannya dari A-Z?"
+                    </p>
+
+                    <a href="https://lynk.id/ajengwahys/7nw892ndj2gk" class="inline-block border border-gray-500 text-gray-300 px-4 py-2 rounded text-[10px] font-bold hover:bg-white hover:text-black transition-colors" target="_blank">
+                        Buka Ebook "Becoming Remote Worker" ➜
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-6 py-8 flex flex-col items-center text-center relative z-10 bg-white border-t border-gray-300">
+            <h2 class="text-lg font-bold mb-1">Bangun Portofolio Juara!</h2>
+            <p class="text-xs text-gray-500 max-w-xs mb-4">
+                Langkah pertama menuju gaji Dollar/Euro.
+            </p>
+            
+            <div class="w-full max-w-xs animate-bounce opacity-90">
+                <p class="text-[10px] font-bold text-gray-400 tracking-widest uppercase mb-1">
+                    Klik Tombol Di Bawah 👇
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal-node').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
